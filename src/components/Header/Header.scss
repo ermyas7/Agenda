@@ -1,0 +1,15 @@
+.header{
+    background-color: var(--color-primary);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px var(--grey-light-1) solid;
+
+    &-title{
+        font-size: 2.5rem;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--color-white);
+        text-transform: uppercase;
+    }
+}
