@@ -4,7 +4,7 @@ import './Schedule.scss';
 import Calendar from 'react-calendar';
 import Slot from './Slot';
 
-
+const slotList = [...Array(24).keys()]
 export default function Schedule(){
     const [value, onChange] = useState(new Date());
     return(
@@ -12,7 +12,7 @@ export default function Schedule(){
             <Calendar className="schedule-calendar" 
             onChange={onChange}
             value={value}/>
-            <Slot/>
+            <Slot slotList={slotList}/>
         </div>
     );
 }

@@ -1,22 +1,20 @@
 
-const slotList = [...Array(24).keys()]
-
-const RenderSlotItem = ({slot}) => {
+export const RenderSlotItem = ({slot}) => {
     if(slot < 10){
         return(
-            <div className="schedule-slot-item">
+            <div className="schedule-slot-item" data-testid="slot-time">
                 {`0${slot}:00`}
             </div>
         )
     }
     return(
-        <div className="schedule-slot-item">
+        <div className="schedule-slot-item" data-testid="slot-time">
             {`${slot}:00`}
         </div>
     )
 }
 
-export default function Slot(){
+export default function Slot({slotList}){
     
     return(
         <div className="schedule-slot">
