@@ -24,7 +24,6 @@ const mentors = [
     }
 ]
 export default function MentorsList(){
-
     return(
         <div className="mentors-list">
             <h1 className="mentors-list-title">
@@ -33,7 +32,7 @@ export default function MentorsList(){
             <div className="mentors-list-items">
             {
                 mentors.map((mentor, index) => (
-                    <MentorItem mentor={mentor} id={`${mentor.id}`} index={index}/>
+                    <MentorItem mentor={mentor} key={`${mentor.id}`} index={index}/>
                 ))
             }
             </div>
