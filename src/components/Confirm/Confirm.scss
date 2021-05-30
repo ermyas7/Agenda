@@ -1,0 +1,25 @@
+.confirm{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    &-input{
+        width: 40vw;
+        height: 6rem;
+        border: 1px var(--color-primary-light) solid;
+    }
+
+    &-btn{
+        margin-left: 3rem;
+        color: var(--color-white);
+        background-color: var(--color-primary-light);
+        border: 1px var(--color-primary-light) solid;
+        outline: none;
+        padding: 1rem 2rem;
+        border-radius: .3rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
