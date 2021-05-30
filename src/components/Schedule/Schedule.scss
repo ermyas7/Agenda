@@ -1,0 +1,31 @@
+.schedule{
+    margin-top: 6rem;
+    padding: 5rem;
+    display: flex;
+    justify-content: space-between;
+
+    &-calendar{
+        width: 40vw;
+        font-size: 1.6rem;
+    }
+
+    &-slot{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows:auto;
+        gap: 2rem;
+
+        &-item{
+            border: 1px var(--color-primary-light) solid;
+            padding: 1rem 3rem;
+            font-size: 1.6rem;
+            font-weight: 500;
+
+            &:hover{
+                background-color: var(--color-primary-light); 
+                color: var(--color-white);
+            }
+        }
+
+    }
+}

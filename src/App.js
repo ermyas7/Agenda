@@ -2,6 +2,7 @@ import './App.scss';
 import Header from './components/Header';
 import MentorsList from './components/MentorsList';
 import CalanderProvider from './CalanderProvider';
+import Schedule from './components/Schedule';
 
 function App() {
   
@@ -10,6 +11,7 @@ function App() {
       <CalanderProvider>
         <Header title="calendar"/>
         <MentorsList/>
+        <Schedule/>
       </CalanderProvider>
     </div>
   );
