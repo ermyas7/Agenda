@@ -25,7 +25,7 @@ export default function Confirm(){
                     calanderState?.setReason(evt.target.value);
                 }}></textarea>
                 </div>
-                <button className="confirm-btn" onClick={calanderState.handleSlotReserve}>​Confirm Call</button>
+                <button className="confirm-btn" onClick={() => calanderState.handleSlotReserve('micky')}>​Confirm Call</button>
             </div>
         )
     }

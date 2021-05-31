@@ -11,7 +11,18 @@ export default function Api(url){
         }
     }
 
+    async function patch(data){
+        try {
+          const res = await axios.patch(url, data)
+          const update = res.data;
+          return {data: update, error: ''}  
+        } catch (error) {
+            return {error: error.message}
+        }
+    }
+
     return {
-        get
+        get,
+        patch
     }
 }

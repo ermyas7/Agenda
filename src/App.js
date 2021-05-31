@@ -15,7 +15,8 @@ function App() {
         <MentorsList/>
         {(calanderState?.selectedMentor?.id != null) && <Schedule/>}
         <Confirm/>
-        <ConfirmDialog/>
+
+        {calanderState?.confirmDialog && <ConfirmDialog/>}
     </div>
   );
 }

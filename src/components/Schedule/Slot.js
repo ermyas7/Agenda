@@ -1,7 +1,7 @@
 import formatSlot from "../../libs/formatSlot";
 import dayjs from 'dayjs';
 
-export const RenderSlotItem = ({slot, calanderState, status}) => {
+export const RenderSlotItem = ({slot, calanderState, status, index}) => {
     const handleSlotSelect = () => {
         if(status === 0){
             calanderState.setError('Slot is not available! Please try another slot!'); 
@@ -9,7 +9,8 @@ export const RenderSlotItem = ({slot, calanderState, status}) => {
             calanderState.setError(''); 
             calanderState.setSelectedSlot({
                 ...calanderState.selectedSlot,
-                time: formatSlot(slot)
+                time: formatSlot(slot),
+                index: index
             }) 
         }       
     }
@@ -31,7 +32,12 @@ export default function Slot({slotList, calanderState, mentorData}){
         <div className="schedule-slot">
             {
                 slotList.map((slot, i) => (
-                    <RenderSlotItem slot={slot} key={`slot-${slot}`} calanderState={calanderState} status={slotStatus &&slotStatus[i]}/>
+                    <RenderSlotItem 
+                    slot={slot} 
+                    key={`slot-${slot}`} 
+                    calanderState={calanderState} 
+                    status={slotStatus &&slotStatus[i]} 
+                    index={i}/>
                 ))
             }
         </div>

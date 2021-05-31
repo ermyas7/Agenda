@@ -25,6 +25,7 @@ export default function Schedule(){
             setError(res.error);
         }else{
             setMentorData(res.data);
+            calanderState?.setSelectedMentor({...calanderState.selectedMentor, data: res.data})
         }
     }
     useEffect(() => {
