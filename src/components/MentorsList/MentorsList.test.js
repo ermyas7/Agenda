@@ -4,11 +4,6 @@ import {render, cleanup} from '@testing-library/react';
 
 afterEach(cleanup);
 
-test('renders title', () => {
-    const {getByText} = render(<MentorsList/>)
-    getByText('Your mentors')
-  })
-
 test('renders mentor item', () => {
     const mentor = {name: 'Bobby', id: 1}  
     const {getByText} = render(<MentorItem mentor={mentor}/>)
