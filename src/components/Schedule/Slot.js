@@ -1,26 +1,29 @@
+import formatSlot from "../../libs/formatSlot";
 
-export const RenderSlotItem = ({slot}) => {
-    if(slot < 10){
-        return(
-            <div className="schedule-slot-item" data-testid="slot-time">
-                {`0${slot}:00`}
-            </div>
-        )
+export const RenderSlotItem = ({slot, calanderState}) => {
+    const handleSlotSelect = () => {
+        calanderState.setSelectedSlot({
+            ...calanderState.selectedSlot,
+            time: formatSlot(slot)
+        })        
     }
     return(
-        <div className="schedule-slot-item" data-testid="slot-time">
-            {`${slot}:00`}
+        <div 
+        className={`schedule-slot-item ${(calanderState?.selectedSlot?.time === formatSlot(slot)) ? 'schedule-slot-item-selected': ''}`} 
+        data-testid="slot-time" 
+        onClick={handleSlotSelect}>
+            {formatSlot(slot)}
         </div>
     )
 }
 
-export default function Slot({slotList}){
+export default function Slot({slotList, calanderState}){
     
     return(
         <div className="schedule-slot">
             {
                 slotList.map((slot) => (
-                    <RenderSlotItem slot={slot} key={`slot-${slot}`}/>
+                    <RenderSlotItem slot={slot} key={`slot-${slot}`} calanderState={calanderState}/>
                 ))
             }
         </div>

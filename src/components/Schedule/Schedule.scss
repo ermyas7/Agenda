@@ -25,6 +25,16 @@
                 background-color: var(--color-primary-light); 
                 color: var(--color-white);
             }
+
+            &-selected{
+                background-color: var(--color-primary-light); 
+                color: var(--color-white);  
+            }
+
+            &-reserved{
+                background-color: var(--color-primary); 
+                color: var(--color-white);
+            }
         }
 
     }

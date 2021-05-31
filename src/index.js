@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CalanderProvider from './CalanderProvider';
+
+const WrappedApp = () => (<CalanderProvider><App /></CalanderProvider>);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <WrappedApp/>
   </React.StrictMode>,
   document.getElementById('root')
 );

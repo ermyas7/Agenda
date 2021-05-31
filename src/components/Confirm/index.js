@@ -1,13 +1,34 @@
 import './Confirm.scss';
+import {CalanderContext} from '../../CalanderProvider';
+import { useContext } from 'react';
 
 export default function Confirm(){
-    return(
-        <div className="confirm">
-            <div className="confirm-input">
-            <label htmlFor="confirm-input">Confirm your reservation</label>
-            <textarea name="confirm" id="confirm-input"></textarea>
+    const calanderState = useContext(CalanderContext);
+    if(calanderState && calanderState.error){
+        return <div className="confirm">
+            <div className="confirm-error">
+                <h3>
+                {calanderState.error}
+                </h3>
             </div>
-            <button className="confirm-btn">Confirm</button>
         </div>
-    )
+    }else if(calanderState.selectedSlot.date && calanderState.selectedSlot.time){
+        return(
+            <div className="confirm">
+                <div className="confirm-input">
+                <label htmlFor="confirm-input">Reason for the call</label>
+                <textarea 
+                name="confirm" 
+                id="confirm-input" 
+                value={calanderState?.reason} 
+                onChange={(evt) => {
+                    calanderState?.setReason(evt.target.value);
+                }}></textarea>
+                </div>
+                <button className="confirm-btn">​Confirm Call</button>
+            </div>
+        )
+    }
+    return null;
+    
 }
