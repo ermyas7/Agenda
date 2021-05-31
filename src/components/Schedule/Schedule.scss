@@ -20,6 +20,7 @@
             padding: 1rem 3rem;
             font-size: 1.6rem;
             font-weight: 500;
+            cursor: pointer;
 
             &:hover{
                 background-color: var(--color-primary-light); 
@@ -31,9 +32,10 @@
                 color: var(--color-white);  
             }
 
-            &-reserved{
+            &-reserved, &-reserved:hover {
                 background-color: var(--color-primary); 
                 color: var(--color-white);
+                border: 1px var(--color-primary) solid;
             }
         }
 

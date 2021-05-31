@@ -6,6 +6,8 @@ import Slot from './Slot';
 import {CalanderContext} from '../../CalanderProvider';
 
 const slotList = [...Array(24).keys()]
+const slotStatus = [0,1,1,0,0,1,0,1,0,1,1,0,0,1,1,0,1,0,0,0,1,1,1,1]
+
 export default function Schedule(){
     const calanderState = useContext(CalanderContext);
     return(
@@ -19,7 +21,7 @@ export default function Schedule(){
             }}
             value={calanderState?.selectedSlot?.date}
             />
-            {calanderState?.selectedSlot?.date && <Slot slotList={slotList} calanderState={calanderState}/>}
+            {calanderState?.selectedSlot?.date && <Slot slotList={slotList} calanderState={calanderState} slotStatus={slotStatus}/>}
         </div>
     );
 }
