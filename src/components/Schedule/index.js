@@ -49,7 +49,7 @@ export default function Schedule(){
             minDate={from.$d}
             maxDate={to.$d}
             />
-            {calanderState?.selectedSlot?.date && <Slot slotList={slotList} calanderState={calanderState} />}
+            {calanderState?.selectedSlot?.date && <Slot slotList={slotList} calanderState={calanderState} mentorData={mentorData}/>}
         </div>
     );
 }
