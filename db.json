@@ -97,11 +97,11 @@
           0,
           1,
           0,
-          1,
+          0,
           1,
           0,
           0,
-          1,
+          0,
           1,
           0,
           1,
@@ -152,6 +152,18 @@
           "slot": 1,
           "date": "2021-6-24",
           "message": "Lets discuss"
+        },
+        {
+          "student": "micky",
+          "slot": 1,
+          "date": "2021-6-27",
+          "message": "Revision on slots"
+        },
+        {
+          "student": "micky",
+          "slot": 1,
+          "date": "2021-6-27",
+          "message": "Again"
         }
       ]
     },

@@ -41,6 +41,13 @@ export default function CalanderProvider({children}){
         setComfirmDialog(true);
     }
 
+    const completeReservation = () => {
+        setComfirmDialog(false);
+        setSelectedMentor({id: null, index: null, data: {}});
+        setSelectedSlot({date: null, time: null, index: null});
+        setReason('');
+    }
+
     return <CalanderContext.Provider 
     value={
         {
@@ -54,7 +61,8 @@ export default function CalanderProvider({children}){
             setError, 
             confirmDialog, 
             setComfirmDialog,
-            handleSlotReserve
+            handleSlotReserve,
+            completeReservation
         }
             }>
         {children}
