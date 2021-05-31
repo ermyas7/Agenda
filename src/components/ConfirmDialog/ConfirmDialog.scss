@@ -1,0 +1,43 @@
+.dialog{
+    min-width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(92, 162, 178, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-card{
+        background-color: var(--color-white);
+        position: relative;
+        padding: 6rem;
+    }
+
+    &-title{
+        font-size: 1.9rem;
+        font-weight: 300;
+        color: var(--color-primary);
+        margin: 2rem;
+    }
+
+    &-detail{
+        font-size: 1.6rem;
+
+      &-date{
+          color: var(--color-primary-light);
+          margin-bottom: 1rem;
+      }  
+    }
+
+    &-close{
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        font-size: 1.7rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+}

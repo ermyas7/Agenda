@@ -5,6 +5,7 @@ import {CalanderContext} from './CalanderProvider';
 import Schedule from './components/Schedule';
 import Confirm from './components/Confirm';
 import { useContext } from 'react';
+import ConfirmDialog from './components/ConfirmDialog';
 
 function App() {
   const calanderState = useContext(CalanderContext);
@@ -14,6 +15,7 @@ function App() {
         <MentorsList/>
         {(calanderState?.selectedMentor?.id != null) && <Schedule/>}
         <Confirm/>
+        <ConfirmDialog/>
     </div>
   );
 }

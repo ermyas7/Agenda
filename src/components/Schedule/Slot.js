@@ -3,10 +3,15 @@ import dayjs from 'dayjs';
 
 export const RenderSlotItem = ({slot, calanderState, status}) => {
     const handleSlotSelect = () => {
-        calanderState.setSelectedSlot({
-            ...calanderState.selectedSlot,
-            time: formatSlot(slot)
-        })        
+        if(status === 0){
+            calanderState.setError('Slot is not available! Please try another slot!'); 
+        }else{
+            calanderState.setError(''); 
+            calanderState.setSelectedSlot({
+                ...calanderState.selectedSlot,
+                time: formatSlot(slot)
+            }) 
+        }       
     }
     return(
         <div 
