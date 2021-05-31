@@ -1,7 +1,6 @@
 import './MentorsList.scss';
 import MentorItem from './MentorItem';
-import { useContext, useEffect, useState } from 'react';
-import {CalanderContext} from '../../CalanderProvider';
+import { useEffect, useState } from 'react';
 import Api from '../../libs/Api';
 
 export default function MentorsList(){

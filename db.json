@@ -37,11 +37,11 @@
         ],
         "2021-6-25": [
           0,
-          1,
+          0,
           1,
           0,
           0,
-          1,
+          0,
           0,
           1,
           0,
@@ -164,6 +164,18 @@
           "slot": 1,
           "date": "2021-6-27",
           "message": "Again"
+        },
+        {
+          "student": "micky",
+          "slot": 1,
+          "date": "2021-6-25",
+          "message": "Revision"
+        },
+        {
+          "student": "micky",
+          "slot": 1,
+          "date": "2021-6-25",
+          "message": "Awesome"
         }
       ]
     },

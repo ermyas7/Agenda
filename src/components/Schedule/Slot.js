@@ -26,7 +26,6 @@ export const RenderSlotItem = ({slot, calanderState, status, index}) => {
 
 export default function Slot({slotList, calanderState, mentorData}){
     const key =  dayjs(calanderState?.selectedSlot?.date).format('YYYY-M-DD');
-    console.log(key);
     const slotStatus = mentorData?.slots[key];
     return(
         <div className="schedule-slot">

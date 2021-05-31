@@ -1,6 +1,5 @@
 import { createContext, useState } from "react";
 import Api from "./libs/Api";
-import axios from 'axios';
 import dayjs from "dayjs";
 
 export const CalanderContext = createContext();
@@ -36,8 +35,7 @@ export default function CalanderProvider({children}){
             }
         ]
         //make the update on db
-        const res = await Http.patch({ slots, reservations });
-        console.log(res.data);
+        await Http.patch({ slots, reservations });
         setComfirmDialog(true);
     }
 
