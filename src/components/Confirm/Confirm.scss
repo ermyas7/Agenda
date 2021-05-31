@@ -1,12 +1,23 @@
 .confirm{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 
     &-input{
-        width: 40vw;
-        height: 6rem;
-        border: 1px var(--color-primary-light) solid;
+        width: 35vw;
+
+        label{
+            margin-bottom: 1rem;
+            display: inline-block;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+    
+        textarea{
+            border: 1px var(--color-primary-light) solid;
+            height: 6rem;
+            width: 100%;
+        }
     }
 
     &-btn{
